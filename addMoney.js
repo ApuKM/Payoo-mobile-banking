@@ -22,8 +22,16 @@ document.getElementById("btn-add-amount").addEventListener("click", () => {
     const pin = getInputFromId("add-amount-pin");
     // console.log(pin)
     if(pin === "1234"){
-       alert(`Add money successful to ${bank}`);
-       setBalance(balance)
+       alert(`Add money successful to ${bank} at ${new Date()}`);
+       setBalance(balance);
+       const history = document.getElementById("history-container");
+       const newHistory = document.createElement("div");
+       newHistory.innerHTML = `
+        <p class="transaction-card p-3 bg-base-100">
+        Add money successful to ${bank} bank at ${new Date()}
+      </p>`
+      history.appendChild(newHistory);
+       
     }else{
         alert("Invalid Pin Number")
         return;

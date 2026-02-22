@@ -20,6 +20,13 @@ document.getElementById("btn-cashout").addEventListener("click", () => {
   if (pin === "1234") {
     alert("Withdraw successful");
     setBalance(newBalance);
+    const history = document.getElementById("history-container");
+       const newHistory = document.createElement("div");
+       newHistory.innerHTML = `
+        <p class="transaction-card p-3 bg-base-100">
+        Cash out successful form ${agentNumber} at ${new Date()}
+      </p>`
+      history.appendChild(newHistory);
   } else {
     alert("Invalid pin");
     return;
