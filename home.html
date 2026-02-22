@@ -65,11 +65,11 @@
       </p>
 
       <div class="buttons grid grid-cols-3 gap-3 py-5">
-        <button class="btn btn-soft flex-col h-full py-4">
+        <button class="btn btn-soft flex-col h-full py-4" onclick="showOnly('add-money')">
           <img src="assets/opt-1.png" alt="" />
           <p class="">Add Money</p>
         </button>
-        <button class="btn btn-soft flex-col h-full py-4">
+        <button class="btn btn-soft flex-col h-full py-4" onclick="showOnly('cashout')">
           <img src="assets/opt-2.png" alt="" />
           <p class="">Cash Out</p>
         </button>
@@ -137,6 +137,7 @@
             <button
               id="btn-add-amount"
               class="btn btn-primary mt-4 rounded-full"
+              onclick="showOnly('add-money')"
             >
               Add Money
             </button>

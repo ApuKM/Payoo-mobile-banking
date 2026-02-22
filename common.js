@@ -11,3 +11,12 @@ function getBalance() {
 function setBalance(value) {
   document.getElementById("balance").innerText = value;
 }
+
+function showOnly(id){
+  const addMoneySection = document.getElementById("add-money");
+  const cashoutSection = document.getElementById("cashout");
+  addMoneySection.classList.add("hidden");
+  cashoutSection.classList.add("hidden");
+  const selectedSection = document.getElementById(id);
+  selectedSection.classList.remove("hidden")
+}
